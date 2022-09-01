@@ -1,0 +1,26 @@
+{
+	"name": "evennode-conf",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "tsx --no-cache test.ts",
+		"format": "prettier -w .",
+		"build": "tsc"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"fp-ts": "^2.12.3",
+		"io-ts": "^2.2.18"
+	},
+	"devDependencies": {
+		"@tsconfig/node16": "^1.0.3",
+		"@types/tape": "^4.13.2",
+		"prettier": "^2.7.1",
+		"tape": "^5.6.0",
+		"tsx": "^3.9.0",
+		"typescript": "^4.8.2"
+	}
+}
