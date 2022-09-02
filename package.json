@@ -1,16 +1,20 @@
 {
-	"name": "evennode-conf",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"name": "@polena/evennode",
+	"version": "0.1.0",
+	"description": "Basic utilities for evennode hosting",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist/*"
+	],
 	"scripts": {
 		"test": "tsx --no-cache test.ts",
 		"format": "prettier -w .",
 		"build": "tsc"
 	},
 	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"author": "jaromir.polena@gmail.com",
+	"license": "MIT",
 	"dependencies": {
 		"fp-ts": "^2.12.3",
 		"io-ts": "^2.2.18"
@@ -22,5 +26,13 @@
 		"tape": "^5.6.0",
 		"tsx": "^3.9.0",
 		"typescript": "^4.8.2"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rumCAJs/evennode-utils.git"
+	},
+	"bugs": {
+		"url": "https://github.com/rumCAJs/evennode-utils/issues"
+	},
+	"homepage": "https://github.com/rumCAJs/evennode-utils#readme"
 }

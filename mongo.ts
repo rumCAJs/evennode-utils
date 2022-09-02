@@ -15,6 +15,7 @@ export type MongoConf = t.TypeOf<typeof MongoConf>
 export interface ParseError {
 	_type: 'ParseError'
 	msg: string
+	details?: string
 }
 
 const parseConf = (
@@ -26,13 +27,13 @@ const parseConf = (
 				if (!envString) {
 					throw new Error()
 				}
-				const parsed = JSON.parse(envString)
-				return parsed
+				return JSON.parse(envString)
 			},
-			(e) =>
+			(e: any) =>
 				({
 					_type: 'ParseError',
 					msg: 'Given value is not valid JSON',
+					details: e?.message,
 				} as ParseError)
 		),
 		E.chainW(MongoConf.decode)
